@@ -1,0 +1,159 @@
+/* aqui importamos las fuentes deseadas desde google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* cambio universal en todos mis elementos del html con el simbolo de (*)
+   sirve para resetear, elimina todos los estilos por defecto de los navegadores */
+
+   /* aqui se presentan la variables */
+:root{  
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22d4fd;
+    --color-hover:#272727;
+
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+/* aqui le damos el color al fondo y el color a las letras 
+    tambien con heigth damos el fortato para utilizar toda la pagina en ancho y alto
+    box-sizing: border-box especificamos que los elemento hijos de body no salgan del
+    del padre*/
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /* height: 100vh; */
+    box-sizing: border-box;
+    /* esta es una manera de poner los colores a tu index 
+    background-color: black;
+    color: white; */
+}
+.header{
+    padding: 2% 0% 0% 15%;
+}
+.headerMenu{
+    display: flex;
+    gap: 80px;
+
+}
+.headerMenuLink{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+
+
+}
+/* aqui strong resaltara y pintara del color deseado
+strong {
+    color: #22d4fd;
+} */
+/* el punto(. es para declarar una clase dentro de css y despues del punto se pone el nombre usado dentro de strong) */
+.tituloDestaque{
+    color: var(--color-terciario);
+}
+/* aqui ponemos el formato altura y posicion de nuestros elementos */
+.presentacion{
+    display: flex;
+    align-items: center;
+    margin: 6% 15%;
+    justify-content: space-between;
+    gap: 82px;
+
+}
+.presentacionContenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.presentacionContenidoTitulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+
+}
+.presentacionContenidoParrafo{
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+}
+.presentacionEnlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; 
+}
+.presentacionSubtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.presentacionEnlacesLink{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacionEnlacesLink:hover{
+    background-color: var(--color-hover);
+}
+.presentacionImg{
+    width: 50%;
+}
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+@media (max-width: 1200px){
+    .header{
+        padding: 10%;
+    }
+    .headerMenu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacionContenido{
+        width: auto;
+    }
+}
+/* Explicando el código anterior:
+font-weight: bold; (Texto en negrita)
+color: #22D4FD; (Color del texto azul)
+border: 1px solid #22D4FD; (Borde con 1 px de ancho, de tipo sólido y color del borde azul)
+padding: 10px; (Espaciado interno de 10px)
+HTML
+<h1>Formación de <span>Front-end</span></h1>
+CSS
+h1{
+            font-weight: bold;
+}
+span{
+            color: #22D4FD;
+            border: 1px solid #22D4FD;
+            padding: 10px;
+} */
